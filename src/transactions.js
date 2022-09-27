@@ -1,4 +1,3 @@
-//  import resultAccount, { creatAccount} from "./creatAccount.js";
 import moment from 'moment'
 import { resultAccount } from './creatAccount.js'
 var transactionHistory = []
