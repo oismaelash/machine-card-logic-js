@@ -1,5 +1,5 @@
 import {creatAccount} from '../creatAccount.js'
-test('adds 1 + 2 to equal 3', () => {
+test('espera criar conta sem quebrar logica das regras de negocios', () => {
   expect(creatAccount(conta)).toBe(result);
 });
 
