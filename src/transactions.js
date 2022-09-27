@@ -5,7 +5,7 @@ var transactionHistory = []
 function transactions(transac) {
     
     let value = ''
-    // variavel value recebe a subritação da conta e transação
+    // variavel value recebe a subritação do limite da conta e transação
     value = resultAccount.account['available-limit'] - transac.transaction.amount
     let consult = transac
     // funçao responsavel por determinar se tem uma transação feita em 2minutos pra baixo
