@@ -1,5 +1,5 @@
 import * as readline from "node:readline";
-import * as transaction from "./transaction.js";
+import * as transaction from "./modules/transaction/index.js";
 import * as account from "./modules/account/index.js";
 import * as constants from "./constants.js";
 
@@ -11,6 +11,7 @@ var readerCLI = readline.createInterface({
 var history = [];
 
 function main() {
+  console.log("history", history);
   readerCLI.question(constants.QUESTION_USER, answerUser);
 }
 
@@ -19,22 +20,22 @@ function answerUser(answer) {
 
   switch (ANSWER_LOWER) {
     case constants.CREATE_NAME:
-      readerCLI.question("> ", function (jsonReceived) {
+      readerCLI.question("input: ", function (jsonReceived) {
         let result = account.createAccount(jsonReceived);
         history.push(result);
+        main();
       });
     case constants.TRANSACTION_NAME:
-      readerCLI.question("> ", function (jsonReceived) {
+      readerCLI.question("input: ", function (jsonReceived) {
         let result = transaction.execute(jsonReceived);
         history.push(result);
+        main();
       });
       break;
     case constants.EXIT_NAME:
       exitHandler();
       break;
     case constants.HISTORY_NAME:
-      console.log(history);
-      break;
     default:
       console.log(history);
       main();

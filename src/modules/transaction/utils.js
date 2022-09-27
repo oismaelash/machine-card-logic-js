@@ -1,6 +1,6 @@
 import moment from "moment";
 import * as account from "../account/index.js";
-import * as account from "../../constants.js";
+import * as constants from "../../constants.js";
 
 function isDoubledTransaction(transactionCurrentJson) {
   transactionOld = transactionHistory.find((transactionOldJson) => {
