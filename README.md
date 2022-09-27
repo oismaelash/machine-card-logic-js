@@ -8,7 +8,6 @@ $ npm install
 # Run app
 $ node src/index.js
 
-# para criação e transaçoes use essas linhas Json base
 # Use the lines below how example for create or execute a transaction
 
 {"account": {"active-card": true, "available-limit": 100}}
