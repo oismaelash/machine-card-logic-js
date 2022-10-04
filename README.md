@@ -1,5 +1,8 @@
 ### Machine Card Logic
 
+## youtube
+https://www.youtube.com/watch?v=4MCd6EFI1Yc
+
 ```
 
 # Install dependecies
